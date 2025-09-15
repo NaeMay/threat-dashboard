@@ -1,0 +1,143 @@
+:root {
+    --dark-green: #00471b;
+    --gold: #feac32;
+    --maga-red: #b22234;
+    --maga-white: #ffffff;
+    --maga-blue: #3c3b6e;
+}
+
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2016/11/29/09/16/architecture-1868667_1280.jpg);
+    font-family: "Orbitron", sans-serif;
+    padding: 20px;
+    color: var(--maga-blue);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    max-width: 1000px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 100px;
+    margin: 10px 0;
+    position: relative;
+    animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+    2%, 64% {
+        transform: translate(2px, 0) skew(0deg);
+        filter: drop-shadow(1px 1px 0 var(--gold)) drop-shadow(-1px -1px 0 var(--maga-blue));
+    }
+    4%, 60% {
+        transform: translate(-2px, 0) skew(0deg);
+        filter: drop-shadow(1px 1px 0 var(--gold)) drop-shadow(-1px -1px 0 var(--maga-blue));
+    }
+    62% {
+        transform: translate(0, 0) skew(5deg);
+        filter: drop-shadow(2px 2px 0 var(--maga-red)) drop-shadow(-2px -2px 0 var(--maga-blue));
+    }
+}
+
+#dashboard {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--gold);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1, h2 {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--maga-red);
+    text-align: center;
+    position: relative;
+    animation: glitch 1s linear infinite;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.button {
+    background: var(--maga-blue);
+    color: var(--maga-white);
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover,
+.button:focus {
+    background: var(--maga-red);
+    box-shadow: 0 0 10px var(--gold);
+}
+
+.security-note {
+    font-size: 0.9rem;
+    color: var(--maga-blue);
+    margin: 1rem 0;
+}
+
+footer {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+a {
+    color: var(--maga-red);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--gold);
+}
+
+@media (max-width: 600px) {
+    #dashboard {
+        padding: 1.5rem;
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 400px) {
+    .button {
+        padding: 0.4rem;
+    }
+    .security-note {
+        font-size: 0.8rem;
+    }
+}

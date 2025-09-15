@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Threat Intelligence Dashboard for real-time cybersecurity insights with mock API integration for PatriotSecurity AI.">
+    <title>Threat Intelligence Dashboard for PatriotSecurity AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <section id="dashboard">
+            <div class="logo-container">
+                <img src="../Images/PatriotSecurity-AI-Logo.png" alt="PatriotSecurity AI Logo" class="logo">
+            </div>
+            <h1>Threat Intelligence Dashboard for PatriotSecurity AI</h1>
+            <p class="security-note">Your source for actionable cybersecurity insights and protection. Built by Kenthesha Evans.</p>
+
+            <div id="loading" class="text-blue-500 font-semibold mb-4 hidden">
+                Loading threat data...
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <!-- Threat Level Card -->
+                <div class="bg-maga-red rounded-xl p-6 shadow-md text-maga-white">
+                    <h2 class="text-lg font-semibold mb-2">Current Threat Level</h2>
+                    <p id="threatLevel" class="text-4xl font-bold">HIGH</p>
+                </div>
+
+                <!-- Recent Incidents Card -->
+                <div class="bg-maga-white dark:bg-gray-700 rounded-xl p-6 shadow-md">
+                    <h2 class="text-lg font-semibold mb-2">Recent Incidents</h2>
+                    <ul id="incidentList" class="text-left space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                        <!-- Incidents will be populated here -->
+                    </ul>
+                </div>
+
+                <!-- Protective Measures Card -->
+                <div class="bg-maga-white dark:bg-gray-700 rounded-xl p-6 shadow-md">
+                    <h2 class="text-lg font-semibold mb-2">Protective Measures</h2>
+                    <p id="protectiveMeasures" class="text-sm text-left text-gray-700 dark:text-gray-300">
+                        Keep your devices and software up to date. Use strong, unique passwords with a password manager. Enable 2FA on all your accounts. Be cautious of phishing emails.
+                    </p>
+                </div>
+            </div>
+
+            <div id="threat-details" class="bg-maga-white dark:bg-gray-700 rounded-xl p-6 shadow-md text-left">
+                <h2 class="text-xl font-semibold mb-4">Latest Threat Analysis</h2>
+                <div id="threat-content" class="prose dark:prose-invert">
+                    <p id="analysisText">Stay informed about the latest threats affecting businesses and individuals.</p>
+                </div>
+                <div id="sources" class="mt-4 text-xs text-gray-500 dark:text-gray-400">
+                    <h3 class="font-medium">Sources:</h3>
+                    <ul id="sourceList" class="list-disc list-inside">
+                        <!-- Sources will be populated here -->
+                    </ul>
+                </div>
+            </div>
+
+            <div id="password-generator" class="bg-maga-white dark:bg-gray-700 rounded-xl p-6 shadow-md mt-6">
+                <h2 class="text-lg font-semibold mb-2">Generate Secure Password</h2>
+                <button id="generatePasswordBtn" class="button">Generate Password</button>
+                <p id="passwordResult" class="text-sm mt-4 text-gray-700 dark:text-gray-300" aria-live="polite"></p>
+                <button id="copyPasswordBtn" class="button hidden mt-2">Copy Password</button>
+            </div>
+        </section>
+
+        <footer>
+            <h2>Connect with Kenthesha Evans</h2>
+            <div class="social-links">
+                <a href="https://github.com/NaeMay" target="_blank" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://x.com/Naemay1990" target="_blank" aria-label="X Profile">
+                    <i class="fab fa-x-twitter"></i> X
+                </a>
+                <a href="https://www.linkedin.com/in/NaeMay90" target="_blank" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://www.freecodecamp.org/ReneeMay" target="_blank" aria-label="freeCodeCamp Profile">
+                    <i class="fab fa-free-code-camp"></i> freeCodeCamp
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
